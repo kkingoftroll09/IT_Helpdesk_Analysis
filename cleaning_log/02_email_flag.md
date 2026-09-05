@@ -87,11 +87,11 @@ Built a helper column `email_flag` using nested IF logic checking:
 2. Does it contain an `@` symbol?
 3. Is the domain one of the two known variants?
 
-    =IF(E2="","⚠️ BLANK",
-      IF(ISERROR(FIND("@",E2)),"⚠️ INVALID FORMAT",
-        IF(AND(NOT(ISNUMBER(FIND("@company.com",E2))),
-               NOT(ISNUMBER(FIND("@company.vn",E2)))),
-           "⚠️ UNKNOWN DOMAIN","OK")))
+        =IF(E2="","⚠️ BLANK",
+          IF(ISERROR(FIND("@",E2)),"⚠️ INVALID FORMAT",
+            IF(AND(NOT(ISNUMBER(FIND("@company.com",E2))),
+                   NOT(ISNUMBER(FIND("@company.vn",E2)))),
+               "⚠️ UNKNOWN DOMAIN","OK")))
 
 
 Verified results via pivot table on `email_flag` column.
