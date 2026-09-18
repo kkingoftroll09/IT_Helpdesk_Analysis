@@ -50,9 +50,9 @@ Cross-table matching uses exact string comparison —
 character by character, left to right. The moment one
 character differs, the entire match fails:
 
-  " C04" vs "C04"
-  ↓ ↓
-  " " ≠ "C" → NO MATCH. Comparison stops immediately.
+    " C04" vs "C04"
+    ↓ ↓
+    " " ≠ "C" → NO MATCH. Comparison stops immediately.
 
 
 Characters 2–4 being identical is irrelevant — the first
